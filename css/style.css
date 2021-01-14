@@ -1,53 +1,144 @@
-body{
-  background: rgb(20, 20, 20);
+
+/* Page */
+
+body {
+  background: black;
+  margin: 0;
 }
 
-h1{
+#page-wrap {
+  width: 960px;
+  margin: auto;
+}
+
+/* Title */
+
+
+h1 {
+  text-align: center;
+  color: white;
+  padding: 1px;
   font-family: 'Goldman', cursive;
- 
+  font-weight: 100;
+  font-size: 3.5em;
+  position: relative;
+  background: -webkit-linear-gradient(left, black, #eee, black);
+  background: -moz-linear-gradient(left, black, #eee, black);
+  background: -ms-linear-gradient(left, black, #eee, black);
+  background: -o-linear-gradient(left, black, #eee, black);
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
-  
-  /* Footer */
-  
+h1 a {
+  background: black;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  letter-spacing: 30px;
+  color: white;
+  -webkit-animation: comein 1.5s 1 ease-in-out forwards;
+  -moz-animation: comein 1.5s 1 ease-in-out forwards;
+}
+
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+/* Transformation */
+
+@-webkit-keyframes comein {
+  0% {
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0);
+  }
+  70% {
+    letter-spacing: 14px;
+  }
+  100% {
+    letter-spacing: 10px;
+    color: rgba(255, 255, 255, 1)
+  }
+}
+
+@-moz-keyframes comein {
+  0% {
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0);
+  }
+  70% {
+    letter-spacing: 14px;
+  }
+  100% {
+    letter-spacing: 10px;
+    color: rgba(255, 255, 255, 1)
+  }
+}
+
+
+/* Glow */
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
+  }
+}
+
+/* Cards */
+
+
+
+/* Footer */
+
+footer {
+  float: none;
+  background-color: #1D1D1D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+.tbfooter, .leftfooter {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 150%;
+}
+
+@media screen and (max-width: 1000px) {
   footer {
-    float: none;
-    background-color: #1D1D1D;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-content: center;
-    margin-top: 100px;
-    font-weight: bold;
+    justify-content: space-around;
   }
-  
-  .tbfooter, .leftfooter {
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    font-size: 150%;
+}
+
+@media screen and (max-width: 700px) {
+  .leftfooter {
+    order: 2;
+    margin-top: 10%;
   }
-  
-  
-  @media screen and (max-width: 1000px) {
-    footer {
-      justify-content: space-around;
-    }
+  .tbfooter {
+    order: 1;
+    margin-top: 5%;
   }
-  
-  @media screen and (max-width: 700px) {
-    .leftfooter {
-      order: 2;
-      margin-top: 10%;
-    }
-    .tbfooter {
-      order: 1;
-      margin-top: 5%;
-    }
-    footer {
-      flex-direction: column;
-      text-align: center;
-    }
+  footer {
+    flex-direction: column;
+    text-align: center;
   }
-  
+}

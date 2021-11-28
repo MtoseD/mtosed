@@ -4,4 +4,5 @@
 [![Twitter Badge](https://img.shields.io/badge/-MikeDaetwyler-blue?style=flat-square&logo=twitter&logoColor=white&style=flat&link=https://twitter.com/MikeDaetwyler)](https://twitter.com/MikeDaetwyler)
 # Stats
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=mtosed&count_private=true&show_icons=true&theme=dark)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&langs_count=10&count_private=true&show_icons=true&theme=dark)](https://github.com/MtoseD/github-readme-stats)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&langs_count=10&count_private=true&show_icons=true&theme=dark)

@@ -1,0 +1,26 @@
+name: Metrics
+on:
+  # 🕛 Update daily at midnight
+  schedule: [{cron: "0 0 * * *"}]
+  # 🚀 Allow manual triggering from the Actions tab
+  workflow_dispatch:
+  # 🏃‍♂️ Run whenever you push changes to the main branch
+  push: {branches: ["main"]}
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          
+          # 👤 Replace with your GitHub username
+          user: MtoseD
+          
+          # 🎨 Appearance
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Europe/Zurich
